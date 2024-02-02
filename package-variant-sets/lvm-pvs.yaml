@@ -1,0 +1,22 @@
+apiVersion: config.porch.kpt.dev/v1alpha2
+kind: PackageVariantSet
+metadata:
+  name: lvm-cluster
+spec:
+  upstream:
+    repo: ocp-infra-packages
+    package: lvm
+    revision: main
+  targets:
+  - objectSelector:
+      apiVersion: infra.nephio.org/v1alpha1
+      kind: WorkloadCluster
+      matchLabels:
+        nephio.org/site-type: edge 
+    template:
+      downstream:
+        package: lvm
+      annotations:
+        approval.nephio.org/policy: initial
+      injectors:
+      - nameExpr: target.name
