@@ -11,6 +11,6 @@ replacements:
     fieldPath: data.namespace
   targets:
   - select:
-      kind: Namespace
+      kind: Job 
     fieldPaths:
     - metadata.name
