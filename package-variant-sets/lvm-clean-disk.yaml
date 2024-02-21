@@ -5,7 +5,7 @@ metadata:
 spec:
   upstream:
     repo: ocp-infra-packages
-    package: lvm
+    package: clean-disk-job 
     revision: main
   targets:
   - objectSelector:
@@ -19,7 +19,7 @@ spec:
     template:
       downstream:
 #        repo: target.name
-        package: lvm
+        package: clean-disk-job
       annotations:
         approval.nephio.org/policy: initial
       injectors:

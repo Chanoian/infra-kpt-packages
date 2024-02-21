@@ -14,15 +14,3 @@ replacements:
       kind: Namespace
     fieldPaths:
     - metadata.name
-  - select:
-      kind: OperatorGroup
-    fieldPaths:
-    - metadata.namespace
-  - select:
-      kind: Subscription
-    fieldPaths:
-    - metadata.namespace
-  - select:
-      kind: LVMCluster
-    fieldPaths:
-    - metadata.namespace
