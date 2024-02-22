@@ -1,7 +1,7 @@
 apiVersion: config.porch.kpt.dev/v1alpha2
 kind: PackageVariantSet
 metadata:
-  name: lvm-cluster
+  name: clean-disk-job 
 spec:
   upstream:
     repo: ocp-infra-packages
